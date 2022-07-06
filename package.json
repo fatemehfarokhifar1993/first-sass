@@ -1,0 +1,12 @@
+{
+  "name": "first-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "mysass": "node-sass -o css scss --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
