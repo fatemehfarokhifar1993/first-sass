@@ -7,8 +7,8 @@ body {
   background: url(../images/background.jpg) center no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
-  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  font-family: Tahoma, sans-serif;
+  direction: rtl; }
 
 section {
   width: 100%;
@@ -41,19 +41,19 @@ section {
   color: #eacf4f;
   font-size: 4rem;
   padding: 1rem;
-  margin-right: 20px;
+  margin-left: 20px;
   border: solid 2px #eacf4f;
   border-radius: 50%; }
 
 .main-name {
-  font-size: 50px;
+  font-size: 4rem;
   color: #e0e0e0;
   font-weight: 200;
   letter-spacing: 2px;
   text-transform: uppercase; }
 
 .sub-name {
-  font-size: 20px;
+  font-size: 2rem;
   color: #e0e0e0;
   text-align: center;
   font-weight: 200;
@@ -61,29 +61,64 @@ section {
   text-transform: uppercase; }
 
 .main-heading {
-  font-size: 100px;
+  font-size: 5rem;
   font-weight: 300;
   color: #eacf4f;
   margin-bottom: 4rem; }
 
 .sub-heading {
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: 300;
   color: #e0e0e0;
   margin-bottom: 80px; }
 
 .main-btn {
-  width: 170px;
-  height: 45px;
-  font-size: 14px;
+  padding: 0.5rem 1.5rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #eacf4f;
-  background-color: transparent;
   border: 1px solid #eacf4f;
   cursor: pointer;
+  background: none;
   transition: all 0.4s;
-  border-radius: 5px; }
+  border-radius: 5px;
+  text-align: center; }
   .main-btn:hover {
     background-color: #eacf4f;
     color: #262626; }
+
+.about-us {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .about-us-image {
+    width: 40%; }
+    .about-us-image img {
+      width: 100%;
+      opacity: 0.6; }
+  .about-us-desc {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem; }
+    .about-us-desc .main-heading {
+      font-size: 3.5rem;
+      margin-bottom: 1rem; }
+    .about-us-desc .sub-heading {
+      font-size: 2.5rem;
+      margin-bottom: 1rem; }
+    .about-us-desc .stars {
+      margin: 30px 0; }
+    .about-us-desc .star {
+      font-size: 1rem;
+      color: #eacf4f;
+      margin-left: 10px; }
+    .about-us-desc .description {
+      font-size: 1.8rem;
+      color: #e0e0e0;
+      direction: rtl;
+      text-align: justify; }
+      .about-us-desc .description::first-letter {
+        padding-right: 30px; }

@@ -25,53 +25,106 @@
   color: $color-primary;
   font-size: 4rem;
   padding: 1rem;
-  margin-right: 20px;
+  margin-left: 20px;
   border: solid 2px $color-primary;
   border-radius: 50%;
 }
 
 .main-name {
-  font-size: 50px;
+  font-size: 4rem;
   color: $color-secondary;
   @include textStyles;
 }
 
 .sub-name {
-  font-size: 20px;
+  font-size: 2rem;
   color: $color-secondary;
   text-align: center;
   @include textStyles;
 }
 
 .main-heading {
-  font-size: 100px;
+  font-size: 5rem;
   font-weight: 300;
   color: $color-primary;
   margin-bottom: 4rem;
 }
 
 .sub-heading {
-  font-size: 60px;
+  font-size: 4rem;
   font-weight: 300;
   color: $color-secondary;
   margin-bottom: 80px;
 }
 
 .main-btn {
-  width: 170px;
-  height: 45px;
-  font-size: 14px;
+  padding: 0.5rem 1.5rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: $color-primary;
-  background-color: transparent;
   border: 1px solid $color-primary;
   cursor: pointer;
+  background: none;
   transition: all 0.4s;
   border-radius: 5px;
-
+  text-align: center;
   &:hover {
     background-color: $color-primary;
     color: $color-dark;
+  }
+}
+
+.about-us {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &-image {
+    width: 40%;
+
+    img {
+      width: 100%;
+      opacity: 0.6;
+    }
+  }
+
+  &-desc {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+
+    .main-heading {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .sub-heading {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .stars {
+      margin: 30px 0;
+    }
+
+    .star {
+      font-size: 1rem;
+      color: $color-primary;
+      margin-left: 10px;
+    }
+
+    .description {
+      font-size: 1.8rem;
+      color: $color-secondary;
+      direction: rtl;
+      text-align: justify;
+
+      &::first-letter {
+        padding-right: 30px;
+      }
+    }
   }
 }
