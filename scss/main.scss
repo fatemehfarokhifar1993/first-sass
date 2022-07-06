@@ -82,7 +82,6 @@
 
   &-image {
     width: 40%;
-
     img {
       width: 100%;
       opacity: 0.6;
@@ -126,5 +125,58 @@
         padding-right: 30px;
       }
     }
+  }
+}
+
+.gallery {
+  .foods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+  }
+}
+.food {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+
+  &:hover .food-overlay {
+    right: 0;
+  }
+
+  &-overlay {
+    @include flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: rgba($color-white, 0.8);
+    color: $color-primary;
+    z-index: 1;
+    transition: right 0.5s;
+    &-price {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      @include textStyles;
+    }
+
+    &-btn {
+      padding: 0.5rem 1.5rem;
+      background-color: $color-primary;
+      color: $color-white;
+      font-size: 1rem;
+      border: 1px solid $color-primary;
+      border-radius: 30px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  &-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }

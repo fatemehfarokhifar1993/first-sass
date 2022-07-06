@@ -6,14 +6,16 @@
 body {
   background: url(../images/background.jpg) center no-repeat;
   background-size: cover;
-  width: 100%;
+  background-attachment: fixed;
   font-family: Tahoma, sans-serif;
-  direction: rtl; }
+  direction: rtl;
+  width: 100%; }
 
 section {
   width: 100%;
   max-width: 1270px;
-  margin: 2rem auto; }
+  margin: 3rem auto;
+  padding: 1rem; }
 
 .home {
   width: 100%;
@@ -122,3 +124,49 @@ section {
       text-align: justify; }
       .about-us-desc .description::first-letter {
         padding-right: 30px; }
+
+.gallery .foods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem; }
+
+.food {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden; }
+  .food:hover .food-overlay {
+    right: 0; }
+  .food-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #eacf4f;
+    z-index: 1;
+    transition: right 0.5s; }
+    .food-overlay-price {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: 200;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+    .food-overlay-btn {
+      padding: 0.5rem 1.5rem;
+      background-color: #eacf4f;
+      color: #fff;
+      font-size: 1rem;
+      border: 1px solid #eacf4f;
+      border-radius: 30px;
+      outline: none;
+      cursor: pointer; }
+  .food-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; }
