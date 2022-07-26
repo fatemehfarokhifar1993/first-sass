@@ -11,11 +11,82 @@ body {
   direction: rtl;
   width: 100%; }
 
-section {
+section,
+nav {
   width: 100%;
   max-width: 1270px;
   margin: 3rem auto;
   padding: 1rem; }
+
+.hamburger-menu {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  z-index: 3; }
+  .hamburger-menu .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.5s; }
+    .hamburger-menu .menu-line {
+      width: 100%;
+      height: 4px;
+      background-color: #eacf4f;
+      transition: all 0.5s 0.5s;
+      transform-origin: right; }
+
+.navbar {
+  position: relative;
+  z-index: 2; }
+  .navbar-navigation {
+    display: flex;
+    width: 35vw;
+    height: 100vh;
+    background-color: #262626;
+    position: fixed;
+    top: 0;
+    right: -35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1); }
+    .navbar-navigation .nav-list-item {
+      list-style: none; }
+    .navbar-navigation .nav-list-link {
+      font-size: 40px;
+      font-weight: 200;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #e0e0e0;
+      text-decoration: none;
+      display: block;
+      margin: 20px;
+      text-align: center;
+      transition: all 0.5s; }
+      .navbar-navigation .nav-list-link:hover {
+        color: #eacf4f;
+        letter-spacing: 4px; }
+
+.checkbox:checked ~ .navbar-navigation {
+  right: 0; }
+
+.checkbox:checked ~ .hamburger-menu .menu {
+  transform: rotateZ(90deg); }
+
+.checkbox:checked ~ .hamburger-menu .menu-line-1 {
+  transform: rotateZ(-40deg); }
+
+.checkbox:checked ~ .hamburger-menu .menu-line-2 {
+  opacity: 0; }
+
+.checkbox:checked ~ .hamburger-menu .menu-line-3 {
+  transform: rotateZ(40deg); }
 
 .home {
   width: 100%;
@@ -45,7 +116,8 @@ section {
   padding: 1rem;
   margin-left: 20px;
   border: solid 2px #eacf4f;
-  border-radius: 50%; }
+  border-radius: 50%;
+  text-decoration: none; }
 
 .main-name {
   font-size: 4rem;
